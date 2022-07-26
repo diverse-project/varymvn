@@ -1,3 +1,4 @@
+from genericpath import isdir
 import xml.dom.minidom as DM
 import json, re, sys, os, jsonlines
 
@@ -10,58 +11,85 @@ def getBuildInfo():
                 return False
     
 def getTSInfo():
-    regex = re.compile("BUILD.FAILURE")
+    infoTS = {"run" : 0, "fail": 0, "error": 0, "skip": 0}
+    
+    testRegex = re.compile("run:")
+    failRegex = re.compile("^FAILURE")
+    successRegex = re.compile("^SUCCESS")
     with open("./testOutput.txt", "r") as in_file:
         for line in in_file:
-            check = re.match(regex, line)
-            if check:
-                return False
-    
-    return True
+            lineSplit = line.split(" ")
+            
+            if len(lineSplit) > 2:
+                if re.match(failRegex, lineSplit[2]):
+                    return False, infoTS
+                elif re.match(successRegex, lineSplit[2]):
+                    return True, infoTS
+                elif re.match(testRegex, lineSplit[1]):
+                    print(lineSplit)
+                    print(lineSplit[2][0:1])
+                    infoTS["run"] += int(lineSplit[2][0:1])
+                    infoTS["fail"] += int(lineSplit[4][0:1])
+                    infoTS["error"] += int(lineSplit[6][0:1])
+                    infoTS["skip"] += int(lineSplit[8][0:1])
                 
-
-def getExecutionTimeTestSuite():
-    surefirePath = str(sys.argv[1])
+def recursiveTestPath():
+    if "target" in os.listdir("."):
+        return getExecutionTimeWithTarget(".")            
+    else:
+        return getExecutionTimeWithNestedTarget(".")
+    
+    
+def getExecutionTimeWithTarget(path):
     regexString = re.compile("^TEST")
     
-    for f in os.listdir(surefirePath):
-        fileCheck = re.match(regexString, f)
-        if fileCheck:
-            
-            doc = DM.parse(surefirePath + f)
-            
-            testsuite = doc.getElementsByTagName("testsuite")
-            name = testsuite[0].getAttribute("name")
-            executingTime = testsuite[0].getAttribute("time")
-            
-            try:
-                with open("./resultExecutionTime.json", "r") as fp:
-                    data = json.load(fp)
-            except IOError:
-                print("The file resultExecutionTime.json didn't exist.")
-                data = {"totalTime" : "0.0", "failure": 0}
-                
-            data['failure'] = data['failure'] or testsuite[0].getAttribute("failures")
-            
-            time = float(data["totalTime"])
-            time += float(executingTime)
-            data["totalTime"] = str(time)    
-                
-            data[name] = executingTime     
-            
-            
-            with open("./resultExecutionTime.json", "w") as outfile:
-                json.dump(data, outfile)
+    if os.path.isdir(path + "/target/surefire-reports"):
+        for f in os.listdir(path + "/target/surefire-reports"):
+                fileCheck = re.match(regexString, f)
+                if fileCheck:
+                    doc = DM.parse(path + "/target/surefire-reports/" + f)
+                    
+                    testSuite = doc.getElementsByTagName("testsuite")
+                    name = testSuite[0].getAttribute("name")
+                    executingTime = testSuite[0].getAttribute("time")
+
+                    try:
+                        with open("./resultExecutionTime.json", "r") as in_file:
+                            data = json.load(in_file)
+                    except IOError:
+                        print("The file resultExecutionTime.json didn't exist.")
+                        data = {"totalTime": "0.0", "failure": 0}
+                        
+                    time = float(data["totalTime"])
+                    time += float(executingTime)
+                    data["totalTime"] = str(time)
+                    
+                    data[name] = executingTime
+                    
+                    with open("./resultExecutionTime.json", "w") as out_file:
+                        json.dump(data, out_file)
+
+def getExecutionTimeWithNestedTarget(clonePath):
+    targetPath = []   
         
+    for dir in os.listdir(clonePath):
+        if os.path.isdir(dir):
+            if "target" in os.listdir(clonePath + "/" + dir):
+                targetPath.append(clonePath + "/" + dir)
+            
+    for path in targetPath:
+        getExecutionTimeWithTarget(path)
     
-def getExecutionTimeForEachProject():
+def getExecutionTimeForEachProject(newVersionDependence):
+    recursiveTestPath()
+    
     try:
-        getExecutionTimeTestSuite()
+        
         with open("./resultExecutionTime.json", "rt") as in_file:
             data = json.load(in_file)
     except IOError:
         print("The file resultExecutionTime.json didn't exist.")
-        data = "nc"    
+        data = "nc"   
         
     try:
         with open("./dependenceInformation.json", "rt") as in_file:
@@ -77,31 +105,38 @@ def getExecutionTimeForEachProject():
         print("The file totalExecutionTime.json didn't exist.")
         dataTime = {}
         
+    tsPassed, infoTs = getTSInfo()
+        
     with jsonlines.open("../totalExecutionTime.json", "w") as out_file:
         if(data != "nc"):    
-            dataTime[str(sys.argv[2])] = {
+            dataTime[newVersionDependence] = {
                 'dependencyName': dependencyInformation['name'],
                 'dependencyOldVersion': dependencyInformation['oldVersion'],
                 'dependencyNewVersion': dependencyInformation['newVersion'],
                 'isBuild': getBuildInfo(),
-                'passedTS': getTSInfo(),
+                'passedTS': tsPassed,
+                'NumberOfExecutedTest': infoTs["run"],
+                'NumberOfFailTest': infoTs["fail"],
+                'NumberOfErrorTest': infoTs["error"],
+                'NumberOfSkippedTest': infoTs["skip"],
                 'executionTime': data['totalTime'],
-                'pathToBuildInformation': str(sys.argv[2]) + "/buildOutput.txt",
-                'pathToTestFile': str(sys.argv[2]) + "/" + str(sys.argv[1])
+                'pathToBuildInformation': newVersionDependence + "/buildOutput.txt",
+                'pathToTestFile': newVersionDependence + "/"
             }
         else:
-            dataTime[str(sys.argv[2])] = {
+            dataTime[newVersionDependence] = {
                 'dependencyName': dependencyInformation['name'],
                 'dependencyOldVersion': dependencyInformation['oldVersion'],
                 'dependencyNewVersion': dependencyInformation['newVersion'],
                 'isBuild': getBuildInfo(),
-                'passedTS': getTSInfo(),
+                'passedTS': tsPassed,
+                'NumberOfExecutedTest': infoTs["run"],
+                'NumberOfFailTest': infoTs["fail"],
+                'NumberOfErrorTest': infoTs["error"],
+                'NumberOfSkippedTest': infoTs["skip"],
                 'executionTime': data,
-                'pathToBuildInformation': str(sys.argv[2]) + "/buildOutput.txt",
-                'pathToTestFile': str(sys.argv[2]) + "/" + str(sys.argv[1])
+                'pathToBuildInformation': newVersionDependence + "/buildOutput.txt",
+                'pathToTestFile': newVersionDependence + "/"
             }
             
         out_file.write(dataTime)
-
-
-getExecutionTimeForEachProject()

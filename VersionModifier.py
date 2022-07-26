@@ -11,10 +11,9 @@ def majorRange(range, currentVersion):
     return newRange
             
 
-def modifyVersionDependency():
-    pomFile = str(sys.argv[1])
+def modifyVersionDependency(pomFile):
     newVersion = 0
-    
+        
     #Get all the dependencies in pom.xml
     detailsDependencies = XMLParser.getAllDependenciesOfXMLFile(pomFile)
     
@@ -37,7 +36,10 @@ def modifyVersionDependency():
         
     #If the version of a dependency is not specified so we did nothing
     if dependencyVersion != -1 and dependencyVersion != None:
-        if dependencyVersion in newRange and len(newRange) > 1:
+        if len(newRange) > 1:
+            if dependencyVersion not in newRange:
+                dependencyVersion = newRange[len(newRange) // 2] 
+            
             index = newRange.index(dependencyVersion)
             
             if(index == 0):
@@ -60,5 +62,3 @@ def modifyVersionDependency():
 
             with open("./dependenceInformation.json", "w") as out_file:
                 json.dump({'name': dependencyName, 'oldVersion': dependencyVersion, 'newVersion': newVersion}, out_file)
-    
-modifyVersionDependency()
