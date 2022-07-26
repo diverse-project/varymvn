@@ -1,0 +1,1030 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] Inspecting build with total of 3 modules...
+[[1;34mINFO[m] Installing Nexus Staging features:
+[[1;34mINFO[m]   ... total of 3 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Build Order:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] mongolink-parent                                                   [pom]
+[[1;34mINFO[m] mongolink                                                          [jar]
+[[1;34mINFO[m] mongolink-testtools                                                [jar]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.mongolink:mongolink-parent[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding mongolink-parent 1.2.2                                    [1/3][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.2:enforce[m [1m(enforce-maven)[m @ [36mmongolink-parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.mongolink:mongolink[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding mongolink 1.2.2                                           [2/3][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.2:enforce[m [1m(enforce-maven)[m @ [36mmongolink[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmongolink[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/kbour/Documents/Stage/ProjetTest/repoV1_bis/varymvn/mongolink-1.2.2_clone/mongolink-1.2.2_13_5/mongolink/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:2.3.2:compile[m [1m(default-compile)[m @ [36mmongolink[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmongolink[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:2.3.2:testCompile[m [1m(default-testCompile)[m @ [36mmongolink[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mmongolink[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /home/kbour/Documents/Stage/ProjetTest/repoV1_bis/varymvn/mongolink-1.2.2_clone/mongolink-1.2.2_13_5/mongolink/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.mongolink.domain.criteria.TestsElementMatchCriteria
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.mockito.cglib.core.ReflectUtils$2 (file:/root/.m2/repository/org/mockito/mockito-core/1.9.5/mockito-core-1.9.5.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of org.mockito.cglib.core.ReflectUtils$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.111 sec
+Running org.mongolink.domain.criteria.TestsCriteria
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 sec
+Running org.mongolink.domain.session.TestsMongoSessionManagerImpl
+11:24:33.255 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.316 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.320 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.321 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.325 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.325 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.328 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.329 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.333 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.333 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.333 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.334 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.335 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.335 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.337 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.338 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.338 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.381 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.408 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.410 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.410 [main] DEBUG org.mongolink.MongoSession - Stoping
+11:24:33.412 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.413 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.413 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.413 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.413 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.413 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.413 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.414 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.414 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.414 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.414 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.414 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.414 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.414 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.415 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.415 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.415 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.415 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.420 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.420 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.420 [main] DEBUG org.mongolink.MongoSession - Stoping
+11:24:33.421 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.422 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.422 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.422 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.422 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.423 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.423 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.423 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.424 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.424 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.424 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.424 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.424 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.425 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.425 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.425 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.425 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.425 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.426 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.426 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.426 [main] DEBUG org.mongolink.MongoSession - Stoping
+11:24:33.427 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.428 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.428 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.428 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.428 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.428 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.429 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.429 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.429 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.429 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.430 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.430 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.430 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.430 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.430 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.430 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.430 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.431 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.431 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.431 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.431 [main] DEBUG org.mongolink.MongoSession - Stoping
+11:24:33.431 [main] DEBUG org.mongolink.MongoSession - Starting
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.339 sec
+Running org.mongolink.domain.session.TestsMongoSessionImpl
+11:24:33.470 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.471 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.471 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.471 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.471 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.471 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.471 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.471 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.472 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.472 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.472 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.472 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.472 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.472 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.472 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.472 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.472 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.472 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.488 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeAggregate@332796d3
+11:24:33.489 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeAggregate@4f0100a7
+11:24:33.489 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.504 [main] DEBUG org.mongolink.MongoSession - Entity added :{ "_id" : { "$oid" : "62dfb2d19008b15ec524c678"} , "value" : "this is a value" , "comments" : [ ] , "index" : 0}
+11:24:33.506 [main] DEBUG org.mongolink.MongoSession - Entity added :{ "_id" : { "$oid" : "62dfb2d19008b15ec524c679"} , "value" : "this is a value" , "comments" : [ ] , "index" : 0}
+11:24:33.506 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.511 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.511 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.511 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.512 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.512 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.512 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.512 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.512 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.512 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.512 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.512 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.513 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.513 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.513 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.513 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.513 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.513 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.513 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.520 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.522 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.522 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.522 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.523 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.523 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.523 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.523 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.523 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.523 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.524 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.524 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.524 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.524 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.524 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.524 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.524 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.524 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.524 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.527 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.528 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.530 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.531 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.531 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.531 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.531 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.532 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.532 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.532 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.532 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.533 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.533 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.533 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.533 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.533 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.533 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.533 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.534 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.534 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.534 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeAggregateWithNaturalId@71812481
+11:24:33.534 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.535 [main] DEBUG org.mongolink.MongoSession - Entity added :{ "_id" : "cle unique"}
+11:24:33.536 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.536 [main] DEBUG org.mongolink.MongoSession - Entity register for deletion : org.mongolink.test.entity.FakeAggregateWithNaturalId@71812481
+11:24:33.536 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.536 [main] DEBUG org.mongolink.MongoSession - Deleting entity : org.mongolink.test.entity.FakeAggregateWithNaturalId@71812481
+11:24:33.536 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.539 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.539 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.540 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.540 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.540 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.540 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.540 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.540 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.540 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.541 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.541 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.541 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.541 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.541 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.541 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.541 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.541 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.541 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.543 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.544 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.545 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.545 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.545 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.545 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.545 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.545 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.545 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.545 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.545 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.546 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.546 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.546 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.546 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.546 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.546 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.546 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.546 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.546 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.546 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.546 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.547 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.547 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.547 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.547 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.547 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.547 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.547 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.547 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.547 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.547 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.547 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.547 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.547 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.547 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.550 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.551 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.551 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.551 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.551 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.551 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.551 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.551 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.551 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.552 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.552 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.552 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.552 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.552 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.552 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.552 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.552 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.552 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.554 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.555 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.555 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.555 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.556 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.556 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.556 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.556 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.556 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.556 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.556 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.557 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.557 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.557 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.557 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.557 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.557 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.557 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.557 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.559 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.559 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.559 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.559 [main] DEBUG o.m.d.u.OverwriteStrategy - Updating : collection fakeaggregate : element { "_id" : { "$oid" : "62dfb2d19008b15ec524c68b"} , "value" : "some new and strange value" , "comments" : [ ] , "index" : 0}
+11:24:33.560 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.561 [main] DEBUG org.mongolink.MongoSession - Stoping
+11:24:33.562 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.562 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.563 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.563 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.563 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.563 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.563 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.563 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.563 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.563 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.563 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.563 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.563 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.563 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.564 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.564 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.564 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.564 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.564 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeAggregate@3568f9d2
+11:24:33.564 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.565 [main] DEBUG org.mongolink.MongoSession - Entity added :{ "_id" : { "$oid" : "62dfb2d19008b15ec524c68f"} , "value" : "this is a value" , "comments" : [ ] , "index" : 3}
+11:24:33.565 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.566 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.570 [main] DEBUG o.m.d.updateStrategy.DiffStrategy - Updating : collection fakeaggregate : query { "_id" : { "$oid" : "62dfb2d19008b15ec524c68f"}} : modifiers : { "$set" : { "value" : "a value"}}
+11:24:33.571 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.572 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.573 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.573 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.573 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.573 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.573 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.573 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.574 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.574 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.574 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.574 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.574 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.574 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.574 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.574 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.574 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.575 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.575 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.576 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.577 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.577 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.577 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.578 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.578 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.578 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.578 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.579 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.579 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.579 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.579 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.579 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.579 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.580 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.580 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.580 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.580 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.580 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeAggregate@61a88b8c
+11:24:33.580 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.582 [main] DEBUG org.mongolink.MongoSession - Entity added :{ "_id" : { "$oid" : "62dfb2d19008b15ec524c693"} , "value" : "a value" , "comments" : [ ] , "index" : 0}
+11:24:33.582 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.583 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.584 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.584 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.584 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.584 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.584 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.584 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.584 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.584 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.584 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.584 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.584 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.584 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.584 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.585 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.585 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.585 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.585 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.585 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.585 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.585 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.585 [main] DEBUG org.mongolink.MongoSession - Stoping
+11:24:33.589 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.589 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.590 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.590 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.590 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.590 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.590 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.590 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.590 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.590 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.590 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.590 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.590 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.590 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.590 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.590 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.591 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.591 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.592 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.593 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.593 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.593 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.594 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.594 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.594 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.594 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.595 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.595 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.595 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.595 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.595 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.595 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.595 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.595 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.595 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.595 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.596 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.596 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.596 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.596 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.597 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.598 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.598 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.598 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.598 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.598 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.598 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.598 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.598 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.598 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.598 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.599 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.599 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.599 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.599 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.599 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.599 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.599 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.599 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeAggregateWithNaturalId@55322aab
+11:24:33.601 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.602 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.602 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.602 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.602 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.602 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.602 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.603 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.603 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.603 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.603 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.603 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.603 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.603 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.603 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.603 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.603 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.603 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.603 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeAggregateWithNaturalId@16c63f5
+11:24:33.604 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.OtherEntityWithNaturalId@35229f85
+11:24:33.605 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.605 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.605 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.605 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.605 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.605 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.606 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.606 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.606 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.606 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.606 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.606 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.606 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.606 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.606 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.606 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.606 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.606 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.608 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.608 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.608 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.608 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.608 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.608 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.608 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.608 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.608 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.609 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.609 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.609 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.609 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.609 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.609 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.609 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.609 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.609 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.611 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.611 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.611 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.612 [main] DEBUG o.m.d.u.OverwriteStrategy - Updating : collection fakeaggregate : element { "_id" : { "$oid" : "62dfb2d19008b15ec524c69d"} , "value" : "un test de plus" , "comments" : [ ] , "index" : 0}
+11:24:33.612 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.614 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.614 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.614 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.614 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.615 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.615 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.615 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.615 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.615 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.615 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.615 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.615 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.615 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.615 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.616 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.616 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.616 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.616 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.616 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeAggregate@2da59753
+11:24:33.617 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.618 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.618 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.618 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.618 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.619 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.619 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.619 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.619 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.619 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.619 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.619 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.619 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.620 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.620 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.620 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.620 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.620 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.622 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.622 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.623 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.624 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.624 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.624 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.624 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.624 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.625 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.625 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.625 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.625 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.625 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.625 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.625 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.625 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.625 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.626 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.626 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.626 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.626 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeAggregate@4d9ac0b4
+11:24:33.626 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.627 [main] DEBUG org.mongolink.MongoSession - Entity added :{ "_id" : { "$oid" : "62dfb2d19008b15ec524c6a6"} , "value" : "value" , "comments" : [ ] , "index" : 0}
+11:24:33.627 [main] DEBUG org.mongolink.MongoSession - Done commiting
+11:24:33.629 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.629 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.630 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.630 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.630 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.630 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.630 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.630 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.631 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.631 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.631 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.631 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.631 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.631 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.631 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.631 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.631 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.631 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.633 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.634 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.635 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.635 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.635 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.635 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.635 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.635 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.635 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.636 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.636 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.636 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.636 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.636 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.636 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.636 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.636 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.636 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.636 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.637 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeAggregateWithNaturalId@1e636ea3
+11:24:33.638 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.638 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.638 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.639 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.639 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.639 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.639 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.639 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.639 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.639 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.639 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.640 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.640 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.640 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.640 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.640 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.640 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.640 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.643 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.644 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.644 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.644 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.644 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.644 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.644 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.644 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.645 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.645 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.645 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.645 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.645 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.645 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.645 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.645 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.645 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.645 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.647 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.647 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.647 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.647 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.648 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.648 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.648 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.648 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.648 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.648 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.648 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.649 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.649 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.649 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.649 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.649 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.649 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.649 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.649 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeAggregateWithNaturalId@495fac5f
+11:24:33.650 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.651 [main] DEBUG org.mongolink.MongoSession - Entity added :{ "_id" : "natural key" , "value" : "a value"}
+11:24:33.651 [main] DEBUG org.mongolink.MongoSession - Done commiting
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.219 sec
+Running org.mongolink.domain.session.TestsMongoSessionWithInheritance
+11:24:33.655 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.656 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.660 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.660 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.660 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.661 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.661 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.663 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.663 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.663 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.663 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.663 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.664 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.664 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.666 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.666 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.666 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.666 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.666 [main] DEBUG org.mongolink.MongoSession - Starting
+11:24:33.666 [main] DEBUG org.mongolink.MongoSession - New entity register for additon : org.mongolink.test.entity.FakeChildAggregate@7cf6a5f9
+11:24:33.666 [main] DEBUG org.mongolink.MongoSession - Commiting unit of work
+11:24:33.667 [main] DEBUG org.mongolink.MongoSession - Entity added :{ "__discriminator" : "FakeChildAggregate" , "_id" : "2"}
+11:24:33.667 [main] DEBUG org.mongolink.MongoSession - Done commiting
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running org.mongolink.domain.session.TestsUnitOfWork
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running org.mongolink.domain.updateStrategy.DiffTest
+1
+2
+3
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running org.mongolink.domain.updateStrategy.DiffStrategyTest
+11:24:33.687 [main] DEBUG o.m.d.updateStrategy.DiffStrategy - Updating array : { "_id" :  null } modifier: $pull  values: { "liste" : "first"}
+11:24:33.688 [main] DEBUG o.m.d.updateStrategy.DiffStrategy - Updating array : { "_id" :  null } modifier: $pushAll  values: { "liste" : [ "third" , "other"]}
+11:24:33.689 [main] DEBUG o.m.d.updateStrategy.DiffStrategy - Updating array : { "_id" :  null } modifier: $push  values: { "liste" : "third"}
+11:24:33.689 [main] DEBUG o.m.d.updateStrategy.DiffStrategy - Updating : collection null : query { "_id" :  null } : modifiers : { "$set" : { "liste.0" : "second" , "liste.1" : "first"}}
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running org.mongolink.domain.updateStrategy.TestsListVisitor
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.012 sec
+Running org.mongolink.domain.updateStrategy.TestsDbObjectDiff
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running org.mongolink.domain.mapper.TestsContextBuilder
+11:24:33.713 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping, org.mongolink.test.additionalMapping]
+11:24:33.714 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.714 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.714 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.714 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.714 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.714 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.714 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.715 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.715 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.715 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.715 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.715 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.715 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.715 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.715 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.720 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.additionalMapping.PostMapping
+11:24:33.720 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Post, field=title}
+11:24:33.720 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Post, field=content}
+11:24:33.720 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping, org.mongolink.test.additionalMapping]
+11:24:33.721 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.simpleMapping]
+11:24:33.721 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateWithNaturalIdMapping
+11:24:33.721 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.721 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.721 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMappingWithCap
+11:24:33.721 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.722 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.OtherAggregateWithNaturalIdMapping
+11:24:33.722 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.OtherEntityWithNaturalId, field=naturalKey}
+11:24:33.722 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.FakeAggregateMapping
+11:24:33.722 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.722 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.722 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.722 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.722 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.722 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.simpleMapping.CommentMapping
+11:24:33.723 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.723 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.simpleMapping]
+11:24:33.723 [main] DEBUG o.m.domain.mapper.ContextBuilder - Scanning : [org.mongolink.test.inheritanceMapping]
+11:24:33.724 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.inheritanceMapping.FakeAggregateWithSubclassMapping
+11:24:33.724 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.724 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.725 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.725 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.725 [main] DEBUG o.m.domain.mapper.ContextBuilder - Mapping : class org.mongolink.test.inheritanceMapping.FakeAggregateWithTwoSubclassMapping
+11:24:33.725 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.725 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.729 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : OtherFakeChildAggregate
+11:24:33.729 [main] DEBUG o.m.domain.mapper.ContextBuilder - Done scanning : [org.mongolink.test.inheritanceMapping]
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running org.mongolink.domain.mapper.TestsCollectionMapper
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running org.mongolink.domain.mapper.TestsSubclassMapper
+11:24:33.740 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.740 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.740 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.740 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.740 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.740 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.740 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.741 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.742 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.742 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.742 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.742 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.742 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.742 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.744 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.744 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.744 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.744 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.744 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.744 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.744 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.744 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.744 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.745 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.746 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.746 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.746 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.746 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.746 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.746 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.746 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.746 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.746 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running org.mongolink.domain.mapper.TestsComponentMapper
+11:24:33.747 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.747 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.mongolink.domain.mapper.TestsPropertyMapper
+11:24:33.750 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.752 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running org.mongolink.domain.mapper.TestsMapperContext
+11:24:33.764 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.mongolink.domain.mapper.TestsClassMapper
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.765 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.766 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.767 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.767 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.mongolink.domain.mapper.TestsIdMapper
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.mongolink.domain.mapper.TestsMapMapper
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.mongolink.domain.mapper.TestsAggregateMapper
+11:24:33.772 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.773 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.773 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.773 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.773 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.773 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.773 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.773 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.773 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.773 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.773 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.773 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.774 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.774 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.774 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.774 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.774 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.774 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.774 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.774 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.775 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.775 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.775 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.775 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.775 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.775 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.775 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.775 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.776 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.776 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.776 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.776 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.776 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.776 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.776 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.776 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.776 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.776 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.776 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.776 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.777 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=naturalKey}
+11:24:33.777 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.777 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregateWithNaturalId, field=value}
+11:24:33.777 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.777 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.777 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.777 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.777 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.777 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.778 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.778 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.778 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.778 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.778 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.778 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.778 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.778 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.779 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.779 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.779 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.779 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.779 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.779 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.779 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.779 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.779 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.779 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.780 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.780 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.Comment, field=value}
+11:24:33.780 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.780 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.780 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.780 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.780 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.780 [main] WARN  org.mongolink.utils.FieldContainer - Property value was null : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running org.mongolink.domain.mapper.TestsPropertyInterceptor
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.mongolink.domain.mapper.TestsAggregateMap
+11:24:33.789 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.790 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.790 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : OtherFakeChildAggregate
+11:24:33.791 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.791 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.791 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping subclass : FakeChildAggregate
+11:24:33.791 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeChildAggregate, field=childName}
+11:24:33.791 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.791 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeAggregate, field=id}
+11:24:33.791 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=value}
+11:24:33.792 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping collection : Property{class=org.mongolink.test.entity.FakeAggregate, field=comments}
+11:24:33.792 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=comment}
+11:24:33.792 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping property : Property{class=org.mongolink.test.entity.FakeAggregate, field=index}
+11:24:33.792 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+11:24:33.792 [main] DEBUG org.mongolink.domain.mapper.ClassMap - Mapping id : Property{class=org.mongolink.test.entity.FakeEntityWithCap, field=id}
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running org.mongolink.domain.TestQueryExecutor
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running org.mongolink.domain.converter.TestsLocalDateConverter
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.mongolink.domain.converter.Java8LocalDateTimeConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running org.mongolink.domain.converter.Java8LocalDateConverterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.mongolink.domain.converter.TestsConverter
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.mongolink.domain.converter.TestsMoneyConverter
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running org.mongolink.domain.converter.TestsDateTimeConverter
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.mongolink.utils.TestsSettings
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running org.mongolink.utils.TestsPropertyContainer
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+
+Results :
+
+Tests run: 159, Failures: 0, Errors: 0, Skipped: 3
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36morg.mongolink:mongolink-testtools[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding mongolink-testtools 1.2.2                                 [3/3][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.2:enforce[m [1m(enforce-maven)[m @ [36mmongolink-testtools[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmongolink-testtools[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/kbour/Documents/Stage/ProjetTest/repoV1_bis/varymvn/mongolink-1.2.2_clone/mongolink-1.2.2_13_5/mongolink-testtools/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:2.3.2:compile[m [1m(default-compile)[m @ [36mmongolink-testtools[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmongolink-testtools[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/kbour/Documents/Stage/ProjetTest/repoV1_bis/varymvn/mongolink-1.2.2_clone/mongolink-1.2.2_13_5/mongolink-testtools/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:2.3.2:testCompile[m [1m(default-testCompile)[m @ [36mmongolink-testtools[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mmongolink-testtools[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Summary for mongolink-parent 1.2.2:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] mongolink-parent ................................... [1;32mSUCCESS[m [  0.141 s]
+[[1;34mINFO[m] mongolink .......................................... [1;32mSUCCESS[m [  1.555 s]
+[[1;34mINFO[m] mongolink-testtools ................................ [1;32mSUCCESS[m [  0.025 s]
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  2.265 s
+[[1;34mINFO[m] Finished at: 2022-07-26T11:24:33+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

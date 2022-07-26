@@ -111,7 +111,7 @@ def getVersionRangeFromJSon(pomFile):
         print(artifactID)
     
     #Request to Maven Central REST API which get all the information of a specific dependence with is groupId and artifactId
-    url = "https://search.maven.org/solrsearch/select?q=g:" + listOfDependencies[0][artifactID[0:-1]] + "+AND+a:" + artifactID[0:-1] + "&core=gav&rows=200&wt=json"
+    url = "https://search.maven.org/solrsearch/select?q=g:" + listOfDependencies[0][artifactID[0:-1]] + "+AND+a:" + artifactID[0:-1] + "&core=gav&rows=500&wt=json"
     
     response = urlopen(url)
     data = json.loads(response.read())
