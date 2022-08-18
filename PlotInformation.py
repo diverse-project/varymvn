@@ -1,34 +1,31 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import json
 import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+import os, sys
 
-def getInformationForPlot():
-    with open("./totalExecutionTime.json", "rt") as in_file:
-        data = json.load(in_file)
-        
-    dataNamePlot = []
-    dataValuePlot = []    
+def plotCompareInitialProjectWithCopy():
+    fig, axes = plt.subplots(nrows=1, ncols=2)
     
-    for key in data.keys():
-        dataNamePlot.append(data[key]['dependencyName'])
-        
-        if(data[key]['executionTime'] == 'nc'):
-            dataValuePlot.append(0)
-        else: 
-            dataValuePlot.append(float(data[key]['executionTime']))
+    sns.set(style='whitegrid')
 
-    return dataNamePlot, dataValuePlot
+    dataSet = pd.read_csv(str(sys.argv[1]) + "/plotProjectData.csv")
+ 
+    graph = sns.boxplot(ax=axes[0], x="Project", y="Execution time", data=dataSet[1:-1])
 
+    graph.axhline(dataSet["Execution time"][0], color='r', linewidth=2)
+    
+    label = ["Initial Project", "UPGRADE", "DOWNGRADE"]
+    
+    with open(str(sys.argv[1]) + "/result.txt", "rt") as in_file:
+        temp = in_file.read()
+    
+    data = temp.split(",")
+    
+    axes[1].pie(data, labels=label, colors=sns.color_palette('pastel'), autopct='%0.0f%%')
 
-name, value = getInformationForPlot()
-
-y_pos = np.arange(len(name))
-
-plt.figure(figsize=(10, 12), dpi=80)
-plt.bar(y_pos, value, align='center', alpha=0.5)
-plt.xticks(y_pos, name, rotation=90)
-plt.ylabel('Execution Time')
-plt.title('Programming language usage')
-
-plt.show()
+    plt.show()
+    
+    
+if sys.argv[2] == "0":
+    plotCompareInitialProjectWithCopy()

@@ -1,6 +1,5 @@
-from genericpath import isdir
 import xml.dom.minidom as DM
-import json, re, sys, os, jsonlines
+import json, re, os, jsonlines
 
 def getBuildInfo():
     with open("./buildOutput.txt", "r") as in_file: 
@@ -9,6 +8,15 @@ def getBuildInfo():
                 return True
             elif("BUILD FAILURE" in line):
                 return False
+            
+def getExecutionTime():
+    with open("./testOutput.txt", "r") as in_file:
+        lines = in_file.readlines()
+        for line in lines:
+            l = line.split(" ")
+            if "Total" in l and "time:" in l:
+                return l[4]
+
     
 def getTSInfo():
     infoTS = {"run" : 0, "fail": 0, "error": 0, "skip": 0}
@@ -26,8 +34,6 @@ def getTSInfo():
                 elif re.match(successRegex, lineSplit[2]):
                     return True, infoTS
                 elif re.match(testRegex, lineSplit[1]):
-                    print(lineSplit)
-                    print(lineSplit[2][0:1])
                     infoTS["run"] += int(lineSplit[2][0:1])
                     infoTS["fail"] += int(lineSplit[4][0:1])
                     infoTS["error"] += int(lineSplit[6][0:1])
@@ -42,7 +48,7 @@ def recursiveTestPath():
     
 def getExecutionTimeWithTarget(path):
     regexString = re.compile("^TEST")
-    
+        
     if os.path.isdir(path + "/target/surefire-reports"):
         for f in os.listdir(path + "/target/surefire-reports"):
                 fileCheck = re.match(regexString, f)
@@ -60,12 +66,10 @@ def getExecutionTimeWithTarget(path):
                         print("The file resultExecutionTime.json didn't exist.")
                         data = {"totalTime": "0.0", "failure": 0}
                         
-                    time = float(data["totalTime"])
-                    time += float(executingTime)
-                    data["totalTime"] = str(time)
+                    data["totalTime"] = getExecutionTime()
                     
-                    data[name] = executingTime
-                    
+                    data[name] = float(executingTime)
+                                        
                     with open("./resultExecutionTime.json", "w") as out_file:
                         json.dump(data, out_file)
 
@@ -96,7 +100,7 @@ def getExecutionTimeForEachProject(newVersionDependence):
             dependencyInformation = json.load(in_file)
     except IOError:
         print("The file dependenceInformation.json didn't exist.")
-        dependencyInformation = {'name': "nc", 'oldVersion': "nc", 'newVersion': "nc"}
+        dependencyInformation = {'name': "nc", 'oldVersion': "nc", 'newVersion': "nc", 'state': "nc"}
         
     try:
         with jsonlines.open("../totalExecutionTime.json", "r") as out_file:
@@ -108,35 +112,46 @@ def getExecutionTimeForEachProject(newVersionDependence):
     tsPassed, infoTs = getTSInfo()
         
     with jsonlines.open("../totalExecutionTime.json", "w") as out_file:
-        if(data != "nc"):    
-            dataTime[newVersionDependence] = {
-                'dependencyName': dependencyInformation['name'],
-                'dependencyOldVersion': dependencyInformation['oldVersion'],
-                'dependencyNewVersion': dependencyInformation['newVersion'],
-                'isBuild': getBuildInfo(),
-                'passedTS': tsPassed,
-                'NumberOfExecutedTest': infoTs["run"],
-                'NumberOfFailTest': infoTs["fail"],
-                'NumberOfErrorTest': infoTs["error"],
-                'NumberOfSkippedTest': infoTs["skip"],
-                'executionTime': data['totalTime'],
-                'pathToBuildInformation': newVersionDependence + "/buildOutput.txt",
-                'pathToTestFile': newVersionDependence + "/"
-            }
-        else:
-            dataTime[newVersionDependence] = {
-                'dependencyName': dependencyInformation['name'],
-                'dependencyOldVersion': dependencyInformation['oldVersion'],
-                'dependencyNewVersion': dependencyInformation['newVersion'],
-                'isBuild': getBuildInfo(),
-                'passedTS': tsPassed,
-                'NumberOfExecutedTest': infoTs["run"],
-                'NumberOfFailTest': infoTs["fail"],
-                'NumberOfErrorTest': infoTs["error"],
-                'NumberOfSkippedTest': infoTs["skip"],
-                'executionTime': data,
-                'pathToBuildInformation': newVersionDependence + "/buildOutput.txt",
-                'pathToTestFile': newVersionDependence + "/"
-            }
+        dataTime[newVersionDependence] = {
+            'dependencyName': dependencyInformation['name'],
+            'dependencyOldVersion': dependencyInformation['oldVersion'],
+            'dependencyNewVersion': dependencyInformation['newVersion'],
+            'isBuild': getBuildInfo(),
+            'passedTS': tsPassed,
+            'NumberOfExecutedTest': infoTs["run"],
+            'NumberOfFailTest': infoTs["fail"],
+            'NumberOfErrorTest': infoTs["error"],
+            'NumberOfSkippedTest': infoTs["skip"],
+            'executionTime': getExecutionTime(),
+            'change': dependencyInformation["state"],
+            'pathToBuildInformation': newVersionDependence + "/buildOutput.txt",
+            'pathToTestFile': newVersionDependence + "/"
+        }
+            
+        out_file.write(dataTime)
+        
+def getOriginalProjectInformation():
+    recursiveTestPath()
+    
+    try: 
+        with open("./resultExecutionTime.json", "rt") as in_file:
+            data = json.load(in_file)
+    except IOError:
+        print("The file resultExecutionTime.json didn't exist.")
+        data = "nc"
+        
+    dataTime = {}
+    tsPassed, infoTs = getTSInfo()
+        
+    with jsonlines.open("./totalExecutionTime.json", "w") as out_file:   
+        dataTime["original"] = {
+            'isBuild': getBuildInfo(),
+            'passedTS': tsPassed,
+            'NumberOfExecutedTest': infoTs["run"],
+            'NumberOfFailTest': infoTs["fail"],
+            'NumberOfErrorTest': infoTs["error"],
+            'NumberOfSkippedTest': infoTs["skip"],
+            'executionTime': getExecutionTime()
+        }
             
         out_file.write(dataTime)

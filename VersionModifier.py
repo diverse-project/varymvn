@@ -44,15 +44,19 @@ def modifyVersionDependency(pomFile):
             
             if(index == 0):
                 newVersion = newRange[random.randint(index + 1, len(newRange) - 1)]
+                state = "DOWNGRADE"
             elif(index == len(newRange) - 1):
                 newVersion = newRange[random.randint(0, index - 1)]
+                state = "UPGRADE"
             else:
                 r = random.randint(0,1)
                 
                 if(r == 0):
                     newVersion = newRange[random.randint(0, index - 1)]
+                    state = "UPGRADE"
                 else:
                     newVersion = newRange[random.randint(index + 1, len(newRange) - 1)]
+                    state = "DOWNGRADE"
                     
                 print("OldVersion : " + str(dependencyVersion))
                 print("NewVersion : " + str(newVersion))
@@ -61,4 +65,4 @@ def modifyVersionDependency(pomFile):
             XMLParser.setDependenciesNewVersion(dependencyName, newVersion, pomFile, detailsDependencies[3])    
 
             with open("./dependenceInformation.json", "w") as out_file:
-                json.dump({'name': dependencyName, 'oldVersion': dependencyVersion, 'newVersion': newVersion}, out_file)
+                json.dump({'name': dependencyName, 'oldVersion': dependencyVersion, 'newVersion': newVersion, 'state': state}, out_file)
