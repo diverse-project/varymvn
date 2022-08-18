@@ -26,6 +26,4 @@ def plotCompareInitialProjectWithCopy():
 
     plt.show()
     
-    
-if sys.argv[2] == "0":
-    plotCompareInitialProjectWithCopy()
+plotCompareInitialProjectWithCopy()

@@ -181,6 +181,8 @@ def construcPlotProjectCSV():
         writer = csv.writer(out_file)
         writer.writerows(outputData)
         
+    rateExecutionTime()
+        
 def rateExecutionTime():
     data = pd.read_csv(str(sys.argv[1]) + "/dataTab.csv")
     initProject = pd.read_csv(str(sys.argv[1]) + "/plotProjectData.csv")["Execution time"][0]
@@ -210,5 +212,3 @@ elif sys.argv[2] == "1":
     getEssentialInformation()
 elif sys.argv[2] == "2":
     construcPlotProjectCSV()
-elif sys.argv[2] == "3":
-    rateExecutionTime()
