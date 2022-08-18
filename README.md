@@ -30,3 +30,8 @@ If you want to have a graphic render
 ```
 python3 PlotInformation.py outputProject/name_of_the_clone
 ```
+
+## Work and improvement still to be done
+
+- Change from 1-variation to N-variation algorithm
+- Implement the principle of taking only versions before or after the current version if and only if we could observe that the dependency in question gives mostly better results either when we upgrade its version or when we have downgrade it.
